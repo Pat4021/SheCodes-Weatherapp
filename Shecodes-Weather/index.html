@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="container">
+      <div class="wrapper">
       <div class="weather-place">
    <h1>New York</h1>
     <ul>
@@ -22,8 +23,13 @@
     </ul>
     <div class="row">
       <div class="col-6">
-        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Clear">
-        12℃ | ℉
+        <div class="clearfix">
+        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Clear" class="float-left">
+        <div class="float-left">
+        <strong>12</strong><small class="units">℃ | <a href="#" class="faren">℉</a>
+        </small>
+        </div>
+        </div>
       </div>
       <div class="col-6">
         <ul>
@@ -39,7 +45,8 @@
         </ul>
       </div>
     </div>
-     <small>
+    </div>
+    <small>
     <a href="" target="_blank">Open-source</a> code, by Patricia
     </small> 
     </div>
