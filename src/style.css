@@ -67,7 +67,7 @@ strong {
     text-decoration: none;
 }
 
-.weather-forcast {
+.weather-forecast {
     margin-top: 20px;
     text-align: center;
     color: #000;
@@ -78,7 +78,7 @@ strong {
     opacity: 0.5;
 }
 
-.forcast-temp-min {
+.forecast-temp-min {
     opacity: 0.5;
 
 }
