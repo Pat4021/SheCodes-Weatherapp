@@ -22,13 +22,15 @@
      let windElement = document.querySelector("#wind");
      let dateElement = document.querySelector("#date");
      let iconElement = document.querySelector("#icon");
+
+     celciusTemp = Math.round(response.data.main.temp);
      
-     temperatureElement.innerHTML = Math.round (response.data.main.temp);
+     temperatureElement.innerHTML = Math.round (celciusTemp);
      cityElement.innerHTML =  response.data.name;
      descriptionElement.innerHTML = response.data.weather[0].description; 
      humidityElement.innerHTML = response.data.main.humidity;
      windElement.innerHTML = Math.round (response.data.wind.speed);
-     dateElement.innerHTML = formatDate(response.data.dt + 1000);
+     dateElement.innerHTML = formatDate(response.data.dt * 1000);
      iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
      iconElement.setAttribute("alt", response.data.weather[0].description);
  }
@@ -48,17 +50,35 @@ function search(city) {
 
  }
 
- function displayFarenheit(event) {
+ function showFarenheit(event) {
      event.preventDefault();
-     alert("Hey")
+      let temperatureElement = document.querySelector("#temperature");
+      celciusLink.classList.remove("active");
+      farenheitLink.classList.add("active");
+     let farenTemp = (celciusTemp * 9) / 5 + 32;
+     temperatureElement.innerHTML = Math.round(farenTemp);
 
  }
 
- search("New York");
+ function showCelcius(event) {
+     event.preventDefault();
+     celciusLink.classList.add("active");
+      farenheitLink.classList.remove("active");
+     let temperatureElement = document.querySelector("#temperature");
+     temperatureElement.innerHTML = celciusTemp;  
+       
+ }
+ 
+ let celciusTemp = null;   
  
 
- let form = document.querySelector("search-form"); 
+ let form = document.querySelector("#search-form"); 
  form.addEventListener("submit",handleSubmit);
 
  let farenheitLink = document.querySelector("#faren");
- farenheitLink.addEventListener("click", showFarenheit); 
+ farenheitLink.addEventListener("click", showFarenheit);  
+
+ let celciusLink = document.querySelector("#celci");
+ celciusLink.addEventListener("click", showCelcius);  
+
+search("New York");
