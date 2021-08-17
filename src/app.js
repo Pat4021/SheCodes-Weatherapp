@@ -50,7 +50,7 @@ function search(city) {
 
  function displayFarenheit(event) {
      event.preventDefault();
-     alert("Bitch")
+     alert("Hey")
 
  }
 
