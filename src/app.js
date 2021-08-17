@@ -81,4 +81,4 @@ function search(city) {
  let celciusLink = document.querySelector("#celci");
  celciusLink.addEventListener("click", showCelcius);  
 
-search("New York");
+search("London");
