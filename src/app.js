@@ -30,7 +30,7 @@
      windElement.innerHTML = Math.round (response.data.wind.speed);
      dateElement.innerHTML = formatDate(response.data.dt + 1000);
      iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-     iconElement.setAttribute("alt", response.data.weather[0].description)
+     iconElement.setAttribute("alt", response.data.weather[0].description);
  }
 
 function search(city) {
@@ -44,7 +44,13 @@ function search(city) {
  function handleSubmit(event) {
      event.preventDefault();
      let cityInputElement = document.querySelector("#city-input");
-     search(cityInputElement.value)
+     search(cityInputElement.value);
+
+ }
+
+ function displayFarenheit(event) {
+     event.preventDefault();
+     alert("Bitch")
 
  }
 
@@ -52,4 +58,7 @@ function search(city) {
  
 
  let form = document.querySelector("search-form"); 
- form.addEventListener("submit", handleSubmit);
+ form.addEventListener("submit",handleSubmit);
+
+ let farenheitLink = document.querySelector("#faren");
+ farenheitLink.addEventListener("click", showFarenheit); 
