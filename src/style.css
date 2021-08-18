@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-color: #878787;
+color: #000;
 font-size: 24px;
 font-weight: 100;
 line-height: 28px;
@@ -19,7 +19,7 @@ li {
     list-style: none;
     margin: 0;
     padding: 0;
-    color: rgb(135, 135, 135);
+    color: rgb(61, 58, 58);
     font-size: 16px;
     font-weight: 100;
     line-height: 19px;
@@ -39,6 +39,8 @@ li {
  padding:20px;
  border: 1px solid #dadde1;
  border-radius: 5px;
+ background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+ box-shadow: 3px 3px 3px;
 }
 
 strong {
@@ -75,10 +77,10 @@ strong {
 }
 .day {
     font-size: 16px;
-    opacity: 0.5;
+    opacity: 0.55;
 }
 
 .forecast-temp-min {
-    opacity: 0.5;
+    opacity: 0.55;
 
 }
