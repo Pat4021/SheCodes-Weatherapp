@@ -10,7 +10,7 @@
       }
       let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       let day = days[date.getDay()];
-      return `${day} ${hours}:${minutes}`;
+      return `Last Updated on:${day} at ${hours}:${minutes}`;
  }
 
  function formatForcastDay(timestamp) {
